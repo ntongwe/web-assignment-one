@@ -1,0 +1,60 @@
+/*Junior Ntongwe*/
+body {
+	background-color: lightgrey;
+}
+
+
+.grid-container {
+	/*LandScape*/
+	display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+	"header header"
+	"fcolumn scolumn"
+	"footer footer"
+	;
+	gap: 5px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+.header {
+  grid-area: header;
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+.fcolumn {
+  grid-area: fcolumn;
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+.scolumn {
+  grid-area: scolumn;
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas: 
+      'header header header header header header' 
+      'fcolumn fcolumn fcolumn fcolumn fcolumn fcolumn' 
+      'scolumn scolumn scolumn scolumn scolumn scolumn' 
+      'footer footer footer footer footer footer';
+  }
+}
+
+#ol2prodcts {
+  align-self: left;
+}
